@@ -1,0 +1,46 @@
+<!-- 
+
+    Events that occur when user presses any a
+    key on keyboard belongs to keyboard event in java script
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Key Board event</title>
+ </head>
+ <body>
+     <div class="main">
+         <div>
+             <p>Function will trigger when user put any key in input field</p>
+             <br>
+             <input type = "text" class="Effect"
+             onkeypress = "KeyPress()";
+             onkeydown="keyDown()";
+             onkeyup = "keyUp()";>
+             <br>
+
+             <p id="key"></p>
+         </div>
+     </div>
+
+     <script>
+         const KeyPress = ()=>{
+             document.getElementById("key").innerHTML = `you press ${event.key} and its code is ${event.code}`
+         }
+       
+         const KeyDown = ()=>{
+             document.getElementById("key").innerHTML = 'key is down'
+         }
+       
+         const KeyUp = ()=>{
+             document.getElementById("key").innerHTML = 'key is up'
+         }
+       
+     </script>
+ </body>
+ </html>

@@ -1,0 +1,60 @@
+<!-- the event propagation mode determines in which order the elements recieved the event
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>propagation</title>
+    <style>
+        #parentid{
+            margin:100px;
+            height: 400px;
+            width: 600px;
+            border:2px solid black;
+            background: rgb(122, 70, 243);
+            box-shadow: 0 10px 13px -10px;
+            place-items: center;
+            cursor: pointer;
+        }
+        #childid{
+            margin: 100px;
+            height: 200px;
+            width: 300px;
+            border:2px solid black;
+            background: aquamarine;
+            box-shadow: 0 10px 13px -10px;
+           cursor: pointer;
+        }
+        #o{
+            height: 100vh;
+            width :100vw;
+            place-items: center;
+            background-color: rgb(48, 46, 42);
+        }
+    </style>
+</head>
+<body>
+    <div id=o>
+    <div  id="parentid">
+        <div id="childid"> </div>
+    </div></div>
+
+
+    <script>
+        const parentid = document.getElementById("parentid")
+        const childid = document.getElementById("childid")
+
+        childid.addEventListener('click',()=>{
+            alert('child alert');
+        });
+        parentid.addEventListener('click',()=>{
+            alert('parent alert');
+        },true);
+        
+    
+    </script>
+</body>
+</html>

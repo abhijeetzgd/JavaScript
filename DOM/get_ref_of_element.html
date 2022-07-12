@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                .main-div{
+            background-color: burlywood;
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .button{
+            background-color: rgb(187, 120, 19);
+            color: whitesmoke;
+            height: 50px;
+            /* width: 40px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+    <p class="para">please like the video</p>
+    <p class="para">please share this video</p>
+    <p>Dont forget to subscribe</p>
+    <h1 id='heading'>..to Change the content of this..</h1>
+
+<button class = "button"onclick="changeContent()">Click Here</button>
+</div>
+
+<script>
+    /*
+    *we can directly write by taking the reference,heading is the object here.
+    *now the same we have querySelector which returns the first matching value 
+    */
+   const changeContent = ()=>{
+   document.getElementById('heading').innerHTML="My first mini project";
+   document.querySelector('.para').innerHTML="i am changed";
+   }
+
+</script>
+</body>
+</html>

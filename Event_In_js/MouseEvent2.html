@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListner</title>
+<style>
+    .main-div{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: aqua;
+    }
+
+    #box{
+        width : 200px;
+        height: 200px;
+        background: gold;
+        place-items: center;
+        text-align: center;
+        padding-top: 100px;
+    }
+</style>
+</head>
+<body>
+    <div class = "main-div">
+        <div id = "box">
+            !put cursor here!
+        </div>
+    </div>
+
+    <script>
+        const mou =document.getElementById("box")
+
+        mou.addEventListener('mouseenter',()=>{
+            mou.style.background = 'red';
+            console.log('you are in box');
+        })
+
+        mou.addEventListener('mouseleave',()=>{
+            mou.style.background = 'blue';
+            console.log('you are outof box');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+ <!-- There are 4 ways of writting events
+1. using alert();(inline)
+
+2.by calling a function
+
+3.using inline events(html onClick="" property and element.onClick)
+
+4.using event listner(addEventListner and its attacheEvent) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            font-family: 'Incosolata','sans-serif';
+            background-color: aqua;
+            display: grid;
+            place-items: center;
+            text-align: center;
+
+        }
+        .button-su{
+            display: inline-block;
+            background: yellow;
+            color: darkgray;
+            font-size: 20px;
+            width: 130px;
+            text-align: center;
+            border: 3px solid black;
+            transition: 400ms;
+            padding :10px 22px;
+            z-index: 100000;
+            margin: 20px;
+        } 
+        h1{
+            color: black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+    <h1>different Types of events in Javascript</h1>
+    <div class="button-container">
+        <div class="button-su">
+            <span class="su-button-circle">
+            </span>
+            <a href="#" class="button-su-inner" onclick="alert('Iam awesom no one use me')">
+            <span class = "button-text-container">
+                simple Inline alert()
+            </span>
+          </a>
+        </div>
+        <br>
+
+        <div class="button-su">
+            <span class="su-button-circle">
+            </span>
+            <a href="#" class="button-su-inner" onclick=callingFunction()>
+            <span class = "button-text-container">
+                By calling a Function
+            </span>
+            </a>
+        </div>
+        <br>
+
+        <div class="button-su">
+            <span class="su-button-circle">
+            </span>
+            <a href="#" class="button-su-inner">
+            <span class = "button-text-container " id="thirdway">
+                Inline Event
+            </span>
+            </a>
+        </div>
+        <br>
+
+        <div class="button-su">
+            <span class="su-button-circle">
+            </span>
+            <a href="#" class="button-su-inner">
+            <span class = "button-text-container " id="forthway">
+                using addEventListner
+            </span>
+            </a>
+        </div>
+    </div>
+</div>
+    <script>
+        //2nd way of writting event
+const callingFunction = ()=>{
+    alert("most common way of writting function");
+}
+
+//3rd way of writting function/event
+const tway = document.getElementById("thirdway");
+
+tway.onclick = function (){
+    alert("Taking access of element then triggerd");
+    console.log('hi bro')
+}
+
+
+//4th way of writting 
+
+const fway = document.querySelector("#forthway")
+fway.addEventListener('click',()=>{
+    alert('event listner use kiya hhe');
+});
+    </script>
+</body>
+</html>

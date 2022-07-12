@@ -1,0 +1,52 @@
+<!-- *mouse Event*
+    Events that occure when the mouse interact with the html document belongs
+    to the mouse Event object. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(235, 235, 127);
+            color: aliceblue;
+            display: grid;
+            place-items: center;
+        }
+        #mypara,p{
+            color: black;
+            font-size: 30px;
+        }
+        h1{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p id="myPara" onmousedown="mouseDown()" onmouseup="mouseUp()">
+here mouseDown() is triggerd when the mouse button is pressed down and will change the colour of text to red.the mouse up function is triggerd when mouse button is released and set the color to green click on text!</p>
+<h1>no.of time you press..</h1>
+<p id="demo"> </p>
+<script>
+    var a=0
+    function mouseDown(){
+        document.getElementById("myPara").style.color ="red";
+    //    console.log("mouseDown biro")
+        a = a+1;
+        document.getElementById("demo").innerHTML=a
+        
+       // console.log(`you clicked ${a} times`);
+    }
+
+    function mouseUp(){
+        document.getElementById("myPara").style.color ="green";
+        console.log("mouseUp biro")
+
+    }
+</script>
+</body>
+</html>

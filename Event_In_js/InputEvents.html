@@ -1,0 +1,58 @@
+<!-- *The onchange Event occure when value of an element has been changed
+*For radio button and check boxes the onchange event occur when the checked state has been changed -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Events</title>
+    <style>
+        .main-div{
+            background: seagreen;
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            place-items: center;
+
+        }
+        #iceCream,#ice{
+            background-color: rgb(248, 248, 9);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <label for=" ">Your name</label>
+            <input type="text" name="" id="ice">
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <label>choose an ice cream flavour
+                <select id="iceCream" name="iceCream" onchange="selectElement()">
+                <option value="">Select one...</option>
+                <option value="Vanila">Vanila</option>
+                <option value="chocolate">chocolate</option>
+                <option value="strobery">strobery</option>
+                <option value="butterscotch">butterscotch</option>
+                </select>
+            </label>
+            <br>
+            <div id = "result"></div>
+        </div>
+    </div>
+    <script>
+        const selectElement = ()=>{
+            const inputchange = document.getElementById('ice').value;
+            const iceCream = document.getElementById('iceCream').value;
+            const result = document.getElementById('result');
+            result.innerHTML = `${inputchange} select ${iceCream}`;
+        }
+    </script>
+</body>
+</html>

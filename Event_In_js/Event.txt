@@ -1,0 +1,13 @@
+HTML Events are "things" that happen to html elements.
+when javascript use in html page javascript react on these Events
+
+HTML events:
+    an HTML Event can be something the browser does ,or something a user does
+
+ex. of HTML Events
+1.An html page has finished loading
+2.An html input field was changed
+3.An html button was clicked
+4.Often when events happen you may not do something.
+
+*javascript let you execute code when events are triggered/detected.

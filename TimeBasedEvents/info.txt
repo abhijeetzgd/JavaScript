@@ -1,0 +1,10 @@
+There are generaly 4 time based events are avilable in javaScript
+1. setTimeout(function,milisecond)
+    this executes a function after waiting for a specific time
+
+2. setInterval(function,milisecond)
+    same as setTimeout() ,but repeats the execution of function continuosly
+
+3.clearTimeout(ref)
+
+4.clearInterval(ref)

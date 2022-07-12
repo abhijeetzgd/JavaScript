@@ -1,0 +1,12 @@
+Q. what is object literal in javascript
+->
+1.Object literral is simply a key value pair data structure.
+2.storing variable and function together in one container,we can refer this an object.
+eg.school bag;
+3.we store variable as well as function in single object
+
+Q.what is this object?
+->
+1.the defination of this object is that it contain the current context of program in ececution.
+2.this object has different value depending on where it is placed.
+3.if this object is placed any object then this object will store context of that object.
